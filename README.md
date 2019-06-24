@@ -21,3 +21,18 @@ You have to set up your Pi to be able to receive and emit IR commands. I followe
 Name your remote control desk0 when recording and saving your IR commands. Name your color buttons "red", "yellow", "green", "orange". Case sensitive. Or adapt in the Python script.
 ### Color coding
 Make sure your personal limits for high, low and normal blood glucose are represented within the code. These limits are not retrieved from NightScout.
+### Install modules
+We'll require the requests library and py_irsend wrapper, both available as modules and installable via pip3 (when using Python 3).
+```
+pip3 install requests
+pip3 install py_irsend
+```
+
+## Code
+### Python
+The script should run on python 2 as it does on python 3. But I've only tested it on Python 3.
+### crontab -e
+Edit your crontab to run the script at least every 5 minutes. I've set up cron to run it every minute:
+```
+* * * * * python3 /root/src/glucoir/glucoir-every-5-minutes.py
+```
