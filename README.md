@@ -1,5 +1,5 @@
 # glucoir
-Build a IR blaster on Raspberry Pi and have a script transform your blood glucose levels into color coding of a LED strip
+Build an IR blaster on Raspberry Pi and have a script transform your blood glucose levels into color coding of a LED strip
 
 ![Photo of a desk with green-glowing LEDs below a glass surface](https://github.com/jansche/glucoir/blob/master/IMG_1525_small.jpg)
 
@@ -19,10 +19,13 @@ I wanted to have my desk illuminated in colors representing my current blood glu
 ## Prep
 ### Getting the Raspberry Pi ready
 You have to set up your Pi to be able to receive and emit IR commands. I followed these instructions [](https://tutorials-raspberrypi.de/raspberry-pi-ir-remote-control/) (German language, also I kept to the default GPIO pins 17 and 18). Any Howto on this topic should do it.
+
 ### Nomenclature
 Name your remote control desk0 when recording and saving your IR commands. Name your color buttons "red", "yellow", "green", "orange". Case sensitive. Or adapt in the Python script.
+
 ### Color coding
 Make sure your personal limits for high, low and normal blood glucose are represented within the code. These limits are not retrieved from NightScout.
+
 ### Install modules
 We'll require the requests library and py_irsend wrapper, both available as modules and installable via pip3 (when using Python 3).
 ```
