@@ -19,7 +19,9 @@ I wanted to have my desk illuminated in colors representing my current blood glu
 ## Prep
 ### Getting the Raspberry Pi ready
 You have to set up your Pi to be able to receive and emit IR commands. I followed these [instructions](https://tutorials-raspberrypi.de/raspberry-pi-ir-remote-control/) (German language, also I kept to the default GPIO pins 17 and 18). Any Howto on this topic should do it.
-_*UPDATE*_: After an apt-get update && apt-get upgrade, glucoir stopped working. That's due to a change in the kernel and the used module for IR. Updating /boot/config.txt and replacing
+
+#### *UPDATE*_: After an apt-get update && apt-get upgrade, glucoir stopped working. 
+That's due to a change in the kernel and the used module for IR. Updating /boot/config.txt and replacing
 
 ```
 dtoverlay=lirc-rpi
